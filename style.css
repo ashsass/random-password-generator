@@ -1,3 +1,36 @@
 body {
     margin: 0;
+    background-color: #1F2937;
+}
+
+.container{
+    background-color: #1F2937;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+#green-h1 {
+    color: #4ADF86;
+}
+
+#sentence {
+    color: #D5D4D8;
+}
+
+button {
+    background-color: #10B981;
+    color: #ffffff;
+}
+
+hr {
+    color: #2F3E53
+}
+
+#password-one, #password-two {
+    background-color: #273549;
+    color: #55F991;
+    border: 5px solid black;
+    margin-bottom: 5px;
 }
