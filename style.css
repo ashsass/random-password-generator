@@ -18,7 +18,7 @@ h1 {
     line-height: 40px;
 }
 
-#green-h1 {
+h1 .h1-color {
     color: #4ADF86;
 }
 
@@ -45,6 +45,7 @@ button {
 
 hr {
     color: #2F3E53;
+    border: 1px solid #2F3E53;
 }
 
 #sentence, button, hr {
