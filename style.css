@@ -5,10 +5,15 @@ body {
 
 .container{
     background-color: #1F2937;
+    margin: 115px 145px auto 50px;
 }
 
 h1 {
     color: #ffffff;
+    font-family: Inter;
+    font-size: 40px;
+    letter-spacing: 0.025em;
+    margin-bottom: 10px;
 }
 
 #green-h1 {
@@ -25,7 +30,11 @@ button {
 }
 
 hr {
-    color: #2F3E53
+    color: #2F3E53;
+}
+
+#sentence, button, hr {
+    margin-bottom: 40px;
 }
 
 #password-one, #password-two {
@@ -33,4 +42,6 @@ hr {
     color: #55F991;
     border: 5px solid black;
     margin-bottom: 5px;
+
+    display: inline-block;
 }
