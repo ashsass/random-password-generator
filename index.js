@@ -15,6 +15,6 @@ function renderPassword() {
         passwordOne += characters[getRandomNumber()];
         passwordTwo += characters[getRandomNumber()];
     }
-    passwordOneEl.textContent = "this works";
-    passwordTwoEl.textContent = "this works too";
+    passwordOneEl.textContent = passwordOne;
+    passwordTwoEl.textContent = passwordTwo;
 }
