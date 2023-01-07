@@ -13,8 +13,8 @@ function getRandomNumber() {
 function renderPassword() {
     for(let i = 0; i < 15; i++){
         passwordOne += characters[getRandomNumber()];
+        passwordTwo += characters[getRandomNumber()];
     }
-    console.log(passwordOne)
+    passwordOneEl.textContent = "this works";
+    passwordTwoEl.textContent = "this works too";
 }
-
-renderPassword();
