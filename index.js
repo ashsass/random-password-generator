@@ -3,12 +3,17 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
 
 let passwordOneEl = document.getElementById("password-one");
 let passwordTwoEl = document.getElementById("password-two");
+let passwordLength = 15;
 let passwordLengthEl = document.getElementById("password-length");
+let button = document.querySelector("button");
 
 //Use this function to get the form input information and apply it to the password output
 function getPasswordLength() {
-
+    passwordLength = passwordLengthEl.value;
+    console.log(passwordLength)
 }
+
+button.addEventListener('click', getPasswordLength)
 
 function getRandomNumber() {
     let randomNumber = Math.floor(Math.random() * characters.length)
@@ -18,11 +23,15 @@ function getRandomNumber() {
 function renderPassword() {
     let passwordOne = "";
     let passwordTwo = "";
-    
-    for(let i = 0; i < 15; i++){
+
+    console.log(`In the renderPassword function the password length is: ${passwordLength}`)
+
+    for(let i = 0; i < passwordLength; i++){
         passwordOne += characters[getRandomNumber()];
         passwordTwo += characters[getRandomNumber()];
     }
     passwordOneEl.textContent = passwordOne;
     passwordTwoEl.textContent = passwordTwo;
 }
+
+button.addEventListener('click', renderPassword);
