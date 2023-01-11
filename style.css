@@ -22,12 +22,17 @@ h1 .h1-color {
     color: #4ADF86;
 }
 
-#sentence {
+#sentence-one, #sentence-two {
     color: #D5D4D8;
     font-size: 20px;
     font-family: "Inter";
     font-weight: 300;
     margin-top: 5px;
+}
+
+
+#sentence-two {
+    display: inline-block;
 }
 
 button {
@@ -48,7 +53,7 @@ hr {
     border: 1px solid #2F3E53;
 }
 
-#sentence, button, hr {
+#sentence-one, button, hr {
     margin-bottom: 40px;
 }
 
