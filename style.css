@@ -75,3 +75,10 @@ hr {
     justify-content: center;
     font-size: 18px;
 }
+
+#password-length {
+    margin-left: 5px;
+    width: 50px;
+    margin-right: 50%;
+
+}
