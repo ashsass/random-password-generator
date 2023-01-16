@@ -14,6 +14,8 @@ function getPasswordLength() {
 
 button.addEventListener('click', getPasswordLength)
 
+
+//Use the random number function to create a password from randomly chosen array elements in the parameters the user sets on the webpage. 
 function getRandomNumber() {
     let randomNumber = Math.floor(Math.random() * characters.length)
     return randomNumber;
@@ -33,13 +35,11 @@ function renderPassword() {
 
 button.addEventListener('click', renderPassword);
 
+
 //Copy-on-click function
 function copyOnClick() {
-
-    navigator.clipboard.writeText(passwordOneEl.value); //Copy the selected value
-    console.log(passwordOneEl.value)
-
-    alert("Copied the password: " + passwordOneEl.value) //Testing to make sure it will copy the material
+    navigator.clipboard.writeText(passwordOneEl.textContent); //Copy the selected value
+    console.log(passwordOneEl.textContent)
 }
 
 passwordOneEl.addEventListener('click', copyOnClick)
