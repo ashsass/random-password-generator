@@ -10,7 +10,6 @@ let button = document.querySelector("button");
 //Use this function to get the form input information and apply it to the password output
 function getPasswordLength() {
     passwordLength = passwordLengthEl.value;
-    console.log(passwordLength)
 }
 
 button.addEventListener('click', getPasswordLength)
@@ -24,8 +23,6 @@ function renderPassword() {
     let passwordOne = "";
     let passwordTwo = "";
 
-    console.log(`In the renderPassword function the password length is: ${passwordLength}`)
-
     for(let i = 0; i < passwordLength; i++){
         passwordOne += characters[getRandomNumber()];
         passwordTwo += characters[getRandomNumber()];
@@ -35,3 +32,14 @@ function renderPassword() {
 }
 
 button.addEventListener('click', renderPassword);
+
+//Copy-on-click function
+function copyOnClick() {
+
+    navigator.clipboard.writeText(passwordOneEl.value); //Copy the selected value
+    console.log(passwordOneEl.value)
+
+    alert("Copied the password: " + passwordOneEl.value) //Testing to make sure it will copy the material
+}
+
+passwordOneEl.addEventListener('click', copyOnClick)
