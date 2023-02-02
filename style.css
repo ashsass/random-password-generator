@@ -1,9 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
 body {
     margin: 0;
     background-color: #1F2937;
+    box-sizing: border-box;
 }
 
-.container{
+.heading{
     background-color: #1F2937;
     margin: 115px 145px auto 200px;
     width: 450px;
@@ -18,11 +25,11 @@ h1 {
     line-height: 40px;
 }
 
-h1 .h1-color {
+h1 .heading__color {
     color: #4ADF86;
 }
 
-#sentence-one, #sentence-two {
+.heading__sentence-one, .heading__sentence-two {
     color: #D5D4D8;
     font-size: 20px;
     font-family: "Inter";
@@ -31,7 +38,7 @@ h1 .h1-color {
 }
 
 
-#sentence-two {
+.heading__sentence-two {
     display: inline-block;
 }
 
@@ -53,16 +60,14 @@ hr {
     border: 1px solid #2F3E53;
 }
 
-#sentence-one, button, hr {
+.heading__sentence-one, .password-button, hr {
     margin-bottom: 40px;
 }
 
-.password-container {
-    display: flex;
-    justify-content: space-between;
-}
 
-#password-one, #password-two {
+.password-container__one, 
+.password-container__two,
+.password-container__copy {
     background-color: #273549;
     color: #55F991;
     margin-bottom: 5px;
@@ -70,11 +75,11 @@ hr {
     height: 39px;
     border-radius: 6px;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 18px;
+    display: inline-block;
 }
+
+
 
 #password-length {
     margin-left: 5px;
@@ -82,3 +87,4 @@ hr {
     margin-right: 50%;
 
 }
+

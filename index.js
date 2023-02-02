@@ -1,18 +1,18 @@
 const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
 
-let passwordOneEl = document.getElementById("password-one");
-let passwordTwoEl = document.getElementById("password-two");
-let passwordLength = 15;
-let passwordLengthEl = document.getElementById("password-length");
-let button = document.querySelector("button");
+const passwordOneEl = document.getElementById("password-container__one")
+const passwordTwoEl = document.getElementById("password-container__two")
+const passwordLengthEl = document.getElementById("password-length")
+const passwordBtn = document.getElementById("password-button")
+const copyPasswordOne = document.getElementById("password-container__one")
+const copyPasswordTwo = document.getElementById("password-container__two")
+let passwordLength = 0
 
-//Use this function to get the form input information and apply it to the password output
-function getPasswordLength() {
+
+passwordBtn.addEventListener('click', function() {
     passwordLength = passwordLengthEl.value;
-}
-
-button.addEventListener('click', getPasswordLength)
+})
 
 
 //Use the random number function to create a password from randomly chosen array elements in the parameters the user sets on the webpage. 
@@ -33,7 +33,7 @@ function renderPassword() {
     passwordTwoEl.textContent = passwordTwo;
 }
 
-button.addEventListener('click', renderPassword);
+passwordBtn.addEventListener('click', renderPassword);
 
 
 //Copy-on-click function
@@ -42,4 +42,4 @@ function copyOnClick() {
     console.log(passwordOneEl.textContent)
 }
 
-passwordOneEl.addEventListener('click', copyOnClick)
+copyPasswordOne.addEventListener("click", copyOnClick)
