@@ -5,8 +5,8 @@ const passwordOneEl = document.getElementById("password-container__one")
 const passwordTwoEl = document.getElementById("password-container__two")
 const passwordLengthEl = document.getElementById("password-length")
 const passwordBtn = document.getElementById("password-button")
-const copyPasswordOne = document.getElementById("password-container__one")
-const copyPasswordTwo = document.getElementById("password-container__two")
+const copyPasswordOne = document.getElementById("password-container__button-one")
+const copyPasswordTwo = document.getElementById("password-container__button-two")
 let passwordLength = 0
 
 
@@ -36,10 +36,19 @@ function renderPassword() {
 passwordBtn.addEventListener('click', renderPassword);
 
 
+
 //Copy-on-click function
-function copyOnClick() {
+copyPasswordOne.addEventListener("click", function() {
     navigator.clipboard.writeText(passwordOneEl.textContent); //Copy the selected value
     console.log(passwordOneEl.textContent)
-}
+})
 
-copyPasswordOne.addEventListener("click", copyOnClick)
+copyPasswordTwo.addEventListener("click", function() {
+    navigator.clipboard.writeText(passwordTwoEl.textContent); //Copy the selected value
+    console.log(passwordTwoEl.textContent)
+})
+
+//Need to fix the styling of the buttons and the div
+//Need to clean up the class/id - having a problem accessing the document eu lement when I use class - probably becuase its an array and I need to specify the number in the array
+//change sizing to rem and em    
+//Add an error message if someone tries to get a pass word without inputing a length requirement
