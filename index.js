@@ -46,5 +46,3 @@ copyPasswordTwo.addEventListener("click", function() {
     window.alert("Copied!");
 })
 
-//change sizing to rem and em    
-//Find a more sophisticated way to alert the user when they copy-on-click
