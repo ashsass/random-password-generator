@@ -37,7 +37,6 @@ h1 .heading__color {
     margin-top: 5px;
 }
 
-
 .heading__sentence-two {
     display: inline-block;
 }
@@ -64,10 +63,19 @@ hr {
     margin-bottom: 40px;
 }
 
+.password-button {
+    margin-top: 10px;
+    width: 215px;
+}
+
+.password-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 .password-container__one, 
-.password-container__two,
-.password-container__copy {
+.password-container__two {
     background-color: #273549;
     color: #55F991;
     margin-bottom: 5px;
@@ -77,9 +85,8 @@ hr {
     text-align: center;
     font-size: 18px;
     display: inline-block;
+    padding-top: 10px;
 }
-
-
 
 #password-length {
     margin-left: 5px;
@@ -88,3 +95,8 @@ hr {
 
 }
 
+.password-container__button-one,
+.password-container__button-two {
+    margin-bottom: 4px;
+    padding: 5px 20px;
+}
