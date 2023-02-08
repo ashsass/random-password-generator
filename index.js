@@ -10,31 +10,29 @@ const copyPasswordTwo = document.getElementById("password-container__button-two"
 let passwordLength = 0
 
 
-passwordBtn.addEventListener('click', function() {
-    passwordLength = passwordLengthEl.value;
-})
-
-
 //Use the random number function to create a password from randomly chosen array elements in the parameters the user sets on the webpage. 
 function getRandomNumber() {
     let randomNumber = Math.floor(Math.random() * characters.length)
     return randomNumber;
 }
 
-function renderPassword() {
-    let passwordOne = "";
-    let passwordTwo = "";
 
-    for(let i = 0; i < passwordLength; i++){
-        passwordOne += characters[getRandomNumber()];
-        passwordTwo += characters[getRandomNumber()];
-    }
-    passwordOneEl.textContent = passwordOne;
-    passwordTwoEl.textContent = passwordTwo;
-}
-
-passwordBtn.addEventListener('click', renderPassword);
-
+passwordBtn.addEventListener('click', function() {
+    if(passwordLengthEl.value){
+        passwordLength = passwordLengthEl.value;
+        let passwordOne = "";
+        let passwordTwo = "";
+    
+        for(let i = 0; i < passwordLength; i++){
+            passwordOne += characters[getRandomNumber()];
+            passwordTwo += characters[getRandomNumber()];
+        }
+        passwordOneEl.textContent = passwordOne;
+        passwordTwoEl.textContent = passwordTwo;
+    } else {
+        alert("Please enter a password length")
+    }   
+});
 
 
 //Copy-on-click function
@@ -48,8 +46,5 @@ copyPasswordTwo.addEventListener("click", function() {
     window.alert("Copied!");
 })
 
-//Need to fix the styling of the buttons and the div
-//Need to clean up the class/id - having a problem accessing the document eu lement when I use class - probably becuase its an array and I need to specify the number in the array
 //change sizing to rem and em    
-//Add an error message if someone tries to get a pass word without inputing a length requirement
 //Find a more sophisticated way to alert the user when they copy-on-click
