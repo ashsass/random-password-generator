@@ -40,15 +40,16 @@ passwordBtn.addEventListener('click', renderPassword);
 //Copy-on-click function
 copyPasswordOne.addEventListener("click", function() {
     navigator.clipboard.writeText(passwordOneEl.textContent); //Copy the selected value
-    console.log(passwordOneEl.textContent)
+    window.alert("Copied!");
 })
 
 copyPasswordTwo.addEventListener("click", function() {
     navigator.clipboard.writeText(passwordTwoEl.textContent); //Copy the selected value
-    console.log(passwordTwoEl.textContent)
+    window.alert("Copied!");
 })
 
 //Need to fix the styling of the buttons and the div
 //Need to clean up the class/id - having a problem accessing the document eu lement when I use class - probably becuase its an array and I need to specify the number in the array
 //change sizing to rem and em    
 //Add an error message if someone tries to get a pass word without inputing a length requirement
+//Find a more sophisticated way to alert the user when they copy-on-click
