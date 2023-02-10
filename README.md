@@ -11,6 +11,6 @@ This project is to create a website that allows user to configure a password.
 - Set a password length
 - Add "copy-on-click"
 - Toggle symbols and numbers on/off
-- Make a nicer alert to the user(my addition)
+- Make a nicer alert to the user (my addition)
 
 ## Post Project Thoughts

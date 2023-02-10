@@ -45,6 +45,11 @@ h1 .heading__color {
     display: inline-block;
 }
 
+.hidden {
+    display: inline;
+    color: #fff;
+}
+
 .btn {
     background-color: rgb(16, 185, 129);
     color: #ffffff;

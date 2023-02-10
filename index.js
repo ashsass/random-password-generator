@@ -7,6 +7,7 @@ const passwordLengthEl = document.getElementById("password-length")
 const passwordBtn = document.getElementById("password-button")
 const copyPasswordOne = document.getElementById("password-container__button-one")
 const copyPasswordTwo = document.getElementById("password-container__button-two")
+const messageBox = document.getElementById("message-box");
 let passwordLength = 0
 
 
@@ -30,7 +31,10 @@ passwordBtn.addEventListener('click', function() {
         passwordOneEl.textContent = passwordOne;
         passwordTwoEl.textContent = passwordTwo;
     } else {
-        alert("Please enter a password length")
+        messageBox.innerText = "Please enter a password length"
+        setTimeout(() => {
+            messageBox.style.display = "none";
+        }, 5000);
     }   
 });
 
@@ -46,3 +50,7 @@ copyPasswordTwo.addEventListener("click", function() {
     window.alert("Copied!");
 })
 
+
+
+//Style this so the password div will expand with longer passwords and still keep the layout
+//center the content on the page
