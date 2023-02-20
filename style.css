@@ -14,10 +14,20 @@ body {
     box-sizing: border-box;
 }
 
-.heading{
+.container {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    width: 40rem;
+    height: 80vh;
+}
+
+.heading, .password-container{
     background-color: #1F2937;
-    margin: 11.5rem 14.5rem auto 20rem;
-    width: 45rem;
 }
 
 h1 {
@@ -33,21 +43,48 @@ h1 .heading__color {
     color: #4ADF86;
 }
 
-.heading__sentence-one, .heading__sentence-two {
+.heading__sentence-one, 
+.heading__sentence-two {
     color: #D5D4D8;
     font-size: 2rem;
     font-family: "Inter";
     font-weight: 300;
-    margin-top: .5rem;
+}
+
+.heading__sentence-two, .password-container {
+    margin-top: 4rem;
 }
 
 .heading__sentence-two {
-    display: inline-block;
+    display: flex;
+    justify-content: flex-start;
+    width: 40rem;
+    align-items: center;
+}
+
+#password-length {
+    margin-left: .5rem;
+    width: 5rem;
+}
+
+.password-button, 
+.password-container, 
+.heading__sentence-one {
+    margin-bottom: 4rem;
 }
 
 .hidden {
-    display: inline;
-    color: #fff;
+    display: inline-block;
+    color: #55F991;
+    background: rgba(255, 255, 255, .3);
+    margin-left: 1rem;
+    height: 5rem;
+    width: 12rem;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+    border-radius: 1rem;
+    display: none;
 }
 
 .btn {
@@ -60,8 +97,6 @@ h1 .heading__color {
     font-family: 'Inter';
     font-size: 1.6rem;
     line-height: 2.4rem;
-
-   
 }
 
 .btn:active {
@@ -75,14 +110,11 @@ hr {
     border: .1rem solid #2F3E53;
 }
 
-.heading__sentence-one, .password-button, hr {
-    margin-bottom: 4rem;
-}
 
 .password-button {
-    margin-top: 1rem;
     width: 21.5rem;
 }
+
 
 .password-container {
     display: flex;
@@ -104,12 +136,7 @@ hr {
     padding-top: 1rem;
 }
 
-#password-length {
-    margin-left: .5rem;
-    width: 5rem;
-    margin-right: 50%;
 
-}
 
 .password-container__button-one,
 .password-container__button-two {

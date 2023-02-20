@@ -8,28 +8,35 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <div class="heading">
-            <h1>Generate a
-                <br>
-            <span class="heading__color">random password</span></h1>
-            <p class="heading__sentence-one">Never use an insecure password again.</p>
-            <hr>
-        
-            <p class="heading__sentence-two" id="heading__sentence-two">Password length: </p>
-            <input id="password-length" name="password-length" type="text" required>
-        
-            <button class="btn password-button" id="password-button">Generate Passwords</button>
-            <div class="message-box hidden" id="message-box"></div>
+        <div class="container">
+            <div class="heading">
+                <h1>Generate a
+                    <br>
+                <span class="heading__color">random password</span></h1>
+                <p class="heading__sentence-one">Never use an insecure password again.</p>
+                <hr>
             
-            <hr>
+                <p class="heading__sentence-two" id="heading__sentence-two">Password length: 
+                    <input id="password-length" name="password-length" type="text" required>
+                </p>
+                
+            
+                <button class="btn password-button" id="password-button">Generate Passwords</button>
+                <div class="message-box hidden" id="message-box"></div>
+
+                <hr>
+            </div>
+            
+            
             <div class="password-container" id="password-container">
                 
                 <div class="password-container__one" id="password-container__one"></div>
-                    <button class=" btn password-container__button-one" id="password-container__button-one">Copy</button>
+                    <button class="btn password-container__button-one" id="password-container__button-one">Copy</button>
                 
                 <div class="password-container__two" id="password-container__two"></div>
                     <button class="btn password-container__button-two" id="password-container__button-two">Copy</button>
                 
+            </div>
         </div>
 
         <script src="index.js"></script>

@@ -31,10 +31,11 @@ passwordBtn.addEventListener('click', function() {
         passwordOneEl.textContent = passwordOne;
         passwordTwoEl.textContent = passwordTwo;
     } else {
+        messageBox.style.display = "inline-block";
         messageBox.innerText = "Please enter a password length"
         setTimeout(() => {
             messageBox.style.display = "none";
-        }, 5000);
+        }, 1000);
     }   
 });
 
@@ -52,5 +53,4 @@ copyPasswordTwo.addEventListener("click", function() {
 
 
 
-//Style this so the password div will expand with longer passwords and still keep the layout
-//center the content on the page
+//Need help with the layout not moving when the div box appears
