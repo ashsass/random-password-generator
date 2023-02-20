@@ -42,15 +42,33 @@ passwordBtn.addEventListener('click', function() {
 
 //Copy-on-click function
 copyPasswordOne.addEventListener("click", function() {
-    navigator.clipboard.writeText(passwordOneEl.textContent); //Copy the selected value
-    window.alert("Copied!");
+    if(passwordOneEl.textContent){
+        navigator.clipboard.writeText(passwordOneEl.textContent); //Copy the selected value
+        const passwordOneHidden = document.getElementById("password-one-hidden")
+        passwordOneHidden.style.display = "inline-block"
+        passwordOneHidden.innerText = "Copied!"
+        setTimeout(function() {
+            passwordOneHidden.style.display = "none"
+        }, 1500)
+    }
+    
 })
 
 copyPasswordTwo.addEventListener("click", function() {
-    navigator.clipboard.writeText(passwordTwoEl.textContent); //Copy the selected value
-    window.alert("Copied!");
+    if(passwordTwoEl.textContent){
+        navigator.clipboard.writeText(passwordTwoEl.textContent); //Copy the selected value
+        const passwordTwoHidden = document.getElementById("password-two-hidden")
+        passwordTwoHidden.style.display = "inline-block"
+        passwordTwoHidden.innerText = "Copied!"
+        setTimeout(function() {
+            passwordTwoHidden.style.display = "none"
+        }, 1500)
+    }
+    
 })
 
 
 
 //Need help with the layout not moving when the div box appears
+//Alter the width and height of the hidden boxes to em to go off of the actual text?
+//Consolidate the copy on click options - too repetitive 
