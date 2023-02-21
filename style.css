@@ -143,3 +143,9 @@ hr {
     margin-bottom: 1rem;
     padding: .5rem 2rem;
 }
+
+.copied-box {
+    height: 3rem;
+    width: auto;
+    padding: 0.5rem;
+}

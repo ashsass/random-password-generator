@@ -35,7 +35,7 @@ passwordBtn.addEventListener('click', function() {
         messageBox.innerText = "Please enter a password length"
         setTimeout(() => {
             messageBox.style.display = "none";
-        }, 1000);
+        }, 1500);
     }   
 });
 
