@@ -60,6 +60,7 @@ h1 .heading__color {
     justify-content: flex-start;
     width: 40rem;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 #password-length {
@@ -71,6 +72,22 @@ h1 .heading__color {
 .password-container, 
 .heading__sentence-one {
     margin-bottom: 4rem;
+}
+
+.toggle-label {
+    color: #D5D4D8;
+    font-size: 1.2rem;
+    font-family: "Inter";
+    font-weight: 200;
+}
+
+.numbers {
+    margin-left: 3rem;
+}
+
+.checkbox {
+    margin-left: .5rem;
+    background-color: #4ADF86;
 }
 
 .hidden {
@@ -96,6 +113,7 @@ h1 .heading__color {
     font-family: 'Inter';
     font-size: 1.6rem;
     line-height: 2.4rem;
+    display: block;
 }
 
 .btn:active {
@@ -112,15 +130,14 @@ hr {
 
 .password-button {
     width: 21.5rem;
+    margin-top: 1rem;
 }
-
 
 .password-container {
     display: flex;
     flex-wrap: wrap;
     width: 45rem
 }
-
 
 .password-container__one, 
 .password-container__two {
@@ -135,8 +152,6 @@ hr {
     display: inline-block;
     padding-top: 1rem;
 }
-
-
 
 .password-container__button-one,
 .password-container__button-two {
