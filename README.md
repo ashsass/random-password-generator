@@ -18,3 +18,5 @@ This project is to create a website that allows user to configure a password.
 - Styling can take up a lot of my time and CSS can be very tricky. I want to continue learning best practices with CSS
 - I really enjoyed this project. I was really able to see my hard work pay off with the JavaScript lessons. 
 - setTimeout is my best friend. 
+- Restyle the input box and the checkboxes 
+- Change the color of the button and the mouse on hover 
