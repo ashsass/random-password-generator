@@ -81,19 +81,16 @@ passwordBtn.addEventListener('click', function() {
 
 //Copy-on-click function
 copyPasswordOne.addEventListener("click", function() {
-    if(passwordOneEl.textContent){
-        navigator.clipboard.writeText(passwordOneEl.textContent);
-        const passwordOneHidden = document.getElementById("password-one-hidden")
-        passwordOneHidden.style.display = "inline-block"
-        passwordOneHidden.innerText = "Copied!"
-        setTimeout(function() {
-            passwordOneHidden.style.display = "none"
-        }, 1500)
-    } 
+    copyOnClick(e.target.id)
 })
 
-copyPasswordTwo.addEventListener("click", function() {
-    if(passwordTwoEl.textContent){
+copyPasswordTwo.addEventListener("click", function(e) {
+    copyOnClick(e.target.id)
+})
+
+function copyOnClick(passwordId) {
+    if (passwordId === 'password-container__button-two'){
+        console.log(copyPasswordTwo.parentElement)
         navigator.clipboard.writeText(passwordTwoEl.textContent);
         const passwordTwoHidden = document.getElementById("password-two-hidden")
         passwordTwoHidden.style.display = "inline-block"
@@ -102,11 +99,11 @@ copyPasswordTwo.addEventListener("click", function() {
             passwordTwoHidden.style.display = "none"
         }, 1500)
     }
-    
-})
-
+}
 
 
 //Need help with the layout not moving when the div box appears (the first one when no password length is given)
 //Consolidate the copy on click options - too repetitive 
 //Toggle symbols and stuff
+
+//change id to one or two so I can use string literals to make this less repetitive
