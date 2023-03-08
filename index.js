@@ -1,86 +1,101 @@
 const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
 
-
-const passwordOneEl = document.getElementById("password-container__one")
-const passwordTwoEl = document.getElementById("password-container__two")
-const passwordLengthEl = document.getElementById("password-length")
-const passwordBtn = document.getElementById("password-button")
-const copyPasswordOne = document.getElementById("password-container__button-one")
-const copyPasswordTwo = document.getElementById("password-container__button-two")
-const messageBox = document.getElementById("message-box");
-let passwordLength = 0
-
-//Use the random number function to create a password from randomly chosen array elements in the parameters the user sets on the webpage. 
-function getRandomNumber(arr) {
-    let randomNumber = Math.floor(Math.random() * arr.length)
-    return randomNumber;
-}
+const passwordLength = document.getElementById("password-length")
+const generatePasswordBtn = document.getElementById("generate-password-button")
+const messageBox = document.getElementById("error-message")
+const passwordOneContainer = document.getElementById("password-one-container")
+const passwordTwoContainer = document.getElementById("password-two-container")
+const passwordOne = document.querySelector('.password-one')
+const passwordTwo = document.querySelector('.password-two')
+const copyPasswordOne = document.getElementById("password-one-button")
+const copyPasswordTwo = document.getElementById("password-two-button")
 
 
-passwordBtn.addEventListener('click', function() {
-    const numbers = document.getElementById("numbers")
-    const symbols = document.getElementById("symbols")
+generatePasswordBtn.addEventListener('click', renderPassword)
 
-    if(passwordLengthEl.value){
-        let passwordOne = "";
-        let passwordTwo = "";
-        passwordLength = passwordLengthEl.value;
+function renderPassword() {
+    const passwords = document.querySelectorAll('.password-one, .password-two')
 
-        /*If symbols is not checked it will pull from the copied array that exludes symbols*/
-        if(!symbols.checked && !numbers.checked){
-            const symbolsAndNumbers = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-            const filteredNumbersSymbols = characters.filter((item) => !symbolsAndNumbers.includes(item))
-            for(let i = 0; i < passwordLength; i++){
-                passwordOne += filteredNumbersSymbols[getRandomNumber(filteredNumbersSymbols)];
-                passwordTwo += filteredNumbersSymbols[getRandomNumber(filteredNumbersSymbols)];
+    if(passwordLength.value){
+        passwords.forEach(password => {
+            password.textContent = '';
+        })
+    
+        passwords.forEach(password => {
+            for(let i = 0; i < passwordLength.value; i++){
+                password.textContent += renderCharacter()
             }
-            passwordOneEl.textContent = passwordOne;
-            passwordTwoEl.textContent = passwordTwo;
-
-        }else if(!symbols.checked){
-            const symbols = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
-            const filteredSymbols = characters.filter((item) => !symbols.includes(item))
-            for(let i = 0; i < passwordLength; i++){
-                passwordOne += filteredSymbols[getRandomNumber(filteredSymbols)];
-                passwordTwo += filteredSymbols[getRandomNumber(filteredSymbols)];
-            }
-            passwordOneEl.textContent = passwordOne;
-            passwordTwoEl.textContent = passwordTwo;
-
-        /*Same idea but with numbers*/
-        }else if(!numbers.checked){
-            const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-            const filteredNumbers = characters.filter((item) => !numbers.includes(item))
-            for(let i = 0; i < passwordLength; i++){
-                passwordOne += filteredNumbers[getRandomNumber(filteredNumbers)];
-                passwordTwo += filteredNumbers[getRandomNumber(filteredNumbers)];
-            }
-            passwordOneEl.textContent = passwordOne;
-            passwordTwoEl.textContent = passwordTwo;
-        
-        /*This is the default password option to include all characters in the array*/
-        }else {
-            for(let i = 0; i < passwordLength; i++){
-                passwordOne += characters[getRandomNumber(characters)];
-                passwordTwo += characters[getRandomNumber(characters)];
-            }
-            passwordOneEl.textContent = passwordOne;
-            passwordTwoEl.textContent = passwordTwo;
-        }
-        
-    /*Error message for no password length*/ 
-    } else {
+        })
+    }else {
         messageBox.style.display = "inline-block";
         messageBox.innerText = "Please enter a password length"
         setTimeout(() => {
             messageBox.style.display = "none";
         }, 1500);
     }   
+    }
+
+
+function renderCharacter() {
+    let randomNumber = Math.floor(Math.random() * characters.length)
+    let randomChar = characters[randomNumber]
+    return randomChar
+    }
+
+
+
+
+
+
+
+//Replace 16 with the value that is given by the user
+
+/*
+passwordBtn.addEventListener('click', function() {
+
+    if(passwordLengthEl.value){
+        let passOne = "";
+        let passTwo = "";
+        passwordLength = passwordLengthEl.value;
+
+        if(!symbols.checked && !numbers.checked){
+            const symbolsAndNumbers = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+            const filteredNumbersSymbols = characters.filter((item) => !symbolsAndNumbers.includes(item))
+            for(let i = 0; i < passwordLength; i++){
+                passOne += filteredNumbersSymbols[getRandomNumber(filteredNumbersSymbols)];
+                passTwo += filteredNumbersSymbols[getRandomNumber(filteredNumbersSymbols)];
+            }
+            passwordOneEl.textContent = passOne;
+            passwordTwoEl.textContent = passTwo;
+
+        }else if(!symbols.checked){
+            const symbols = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
+            const filteredSymbols = characters.filter((item) => !symbols.includes(item))
+            for(let i = 0; i < passwordLength; i++){
+                passOne += filteredSymbols[getRandomNumber(filteredSymbols)];
+                passTwo += filteredSymbols[getRandomNumber(filteredSymbols)];
+            }
+            passwordOneEl.textContent = passOne;
+            passwordTwoEl.textContent = passTwo;
+
+    
+        }else if(!numbers.checked){
+            const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+            const filteredNumbers = characters.filter((item) => !numbers.includes(item))
+            for(let i = 0; i < passwordLength; i++){
+                passOne += filteredNumbers[getRandomNumber(filteredNumbers)];
+                passTwo += filteredNumbers[getRandomNumber(filteredNumbers)];
+            }
+            passwordOneEl.textContent = passOne;
+            passwordTwoEl.textContent = passTwo;
+        
+        }
 });
+*/
 
 
 //Copy-on-click function
-copyPasswordOne.addEventListener("click", function() {
+copyPasswordOne.addEventListener("click", function(e) {
     copyOnClick(e.target.id)
 })
 
@@ -89,21 +104,18 @@ copyPasswordTwo.addEventListener("click", function(e) {
 })
 
 function copyOnClick(passwordId) {
-    if (passwordId === 'password-container__button-two'){
-        console.log(copyPasswordTwo.parentElement)
+    if (passwordId === 'password-two-button'){
         navigator.clipboard.writeText(passwordTwoEl.textContent);
-        const passwordTwoHidden = document.getElementById("password-two-hidden")
-        passwordTwoHidden.style.display = "inline-block"
-        passwordTwoHidden.innerText = "Copied!"
-        setTimeout(function() {
-            passwordTwoHidden.style.display = "none"
-        }, 1500)
+    } else if (passwordId === 'password-one-button'){
+        navigator.clipboard.writeText(passwordOneEl.textContent);
     }
 }
 
 
-//Need help with the layout not moving when the div box appears (the first one when no password length is given)
-//Consolidate the copy on click options - too repetitive 
+//Consolidate the copy on click options - too repetitive. Looks better but still needs som ework 
 //Toggle symbols and stuff
 
 //change id to one or two so I can use string literals to make this less repetitive
+//really need to change the id and class names they are out of control
+//the span class for the id is working but i can't get it to display properly
+//Use classList to toggle the hidden messages

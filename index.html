@@ -29,8 +29,8 @@
                 
                 
                 <div class="password-button-container">
-                    <button class="btn password-button" id="password-button">Generate Passwords</button>
-                    <div class="message-box hidden" id="message-box">Please enter a password length</div>
+                    <button class="btn password-button" id="generate-password-button">Generate Passwords</button>
+                    <div class="message-box hidden" id="error-message">Please enter a password length</div>
                 </div>
                 
                 <hr>
@@ -39,14 +39,15 @@
             
             <div class="password-container" id="password-container">
                 
-                <div class="password-container__one" id="password-container__one"></div>
-                    <button class="btn password-container__button-one" id="password-container__button-one">Copy</button>
-                    <div class="copied-box hidden" id="password-one-hidden"></div>
+                <div class="password-container__one" id="password-one-container">
+                    <span class="password-one"></span>
+                    <button class="btn password-container__button-one" id="password-one-button">Copy</button>
+                </div>
                 
-                <div class="password-container__two" id="password-container__two">
-                    <button class="btn password-container__button-two" id="password-container__button-two">Copy</button></div>
-                    <div class="copied-box hidden" id="password-two-hidden"></div>
-                
+                <div class="password-container__two" id="password-two-container">
+                    <span class="password-two"></span>
+                    <button class="btn password-container__button-two" id="password-two-button">Copy</button>
+                </div>
             </div>
         </div>
 
