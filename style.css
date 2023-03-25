@@ -15,17 +15,13 @@ body {
 }
 
 .root {
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
     margin: auto;
-
+    margin-top: 15%;
     width: 40rem;
     height: 80vh;
 }
 
+/* Heading */ 
 .heading, .password-container{
     background-color: #1F2937;
 }
@@ -57,14 +53,14 @@ hr {
 
 /* Need to work on spacing because refactoring the html/css showed me I have overcomplicated a lot of the code. Need to simplify my process */
 
-#password-length {
-    margin-left: .5rem;
-    width: 5rem;
-}
 
-.password-button, 
-.password-container {
-    margin-bottom: 4rem;
+/* Password generator */
+input#password-length {
+    background: #D5D4D8;
+    padding:  0.2rem .5rem;
+    border-radius: 0.5rem;
+    width: 5rem;
+    min-height: 2rem;
 }
 
 .toggle-label-numbers, .toggle-label-symbols {
@@ -78,6 +74,17 @@ hr {
     margin-left: .5rem;
     background-color: #4ADF86;
 }
+
+input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+  }
+
 .toggle-label-numbers {
     margin-left: 2rem;
  }
@@ -122,17 +129,18 @@ button {
 }
 
 
-.password-button {
+.generate-password-button {
     width: 21.5rem;
     margin-top: 1rem;
 }
 
+
+/* Rendered passwords */
 .password-container {
     display: flex;
     flex-wrap: wrap;
     width: 45rem
 }
-
 
 .password-container > div {
     background-color: #273549;
@@ -146,8 +154,6 @@ button {
     display: inline-block;
     padding-top: 1rem;
 }
-
-
 
 .copied-box {
     height: 3rem;
