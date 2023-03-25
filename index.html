@@ -4,32 +4,38 @@
         <meta lang="en">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <div class="container">
+        <div class="root">
             <div class="heading">
                 <h1>Generate a
                     <br>
-                <span class="heading__color">random password</span></h1>
-                <p class="heading__sentence-one">Never use an insecure password again.</p>
+                <span>random password</span></h1>
+                <p>Never use an insecure password again.</p>
                 <hr>
             
-                <p class="heading__sentence-two" id="heading__sentence-two">Password length: 
+                <p>Password length: 
                     <input id="password-length" name="password-length" type="text" required>
                 </p>
 
                 <form>
                     <label class="toggle-label-symbols" for="symbols">Symbols</label>
-                         <input type="checkbox" name="symbols" id="symbols" class="checkbox" checked>
+                         <input 
+                            type="checkbox" name="symbols" id="symbols" class="checkbox" checked
+                        >
                     <label class="toggle-label-numbers" for="numbers">Numbers</label>
-                        <input type="checkbox" name="numbers" id="numbers" class="checkbox" checked>
+                        <input 
+                            type="checkbox" name="numbers" id="numbers" class="checkbox" checked
+                        >
                 </form>
                 
                 
                 <div class="password-button-container">
-                    <button class="btn password-button" id="generate-password-button">Generate Passwords</button>
+                    <button class="password-button">Generate Passwords</button>
                     <div class="message-box hidden" id="error-message">Please enter a password length</div>
                 </div>
                 
@@ -37,16 +43,15 @@
             </div>
             
             
-            <div class="password-container" id="password-container">
-                
-                <div class="password-container__one" id="password-one-container">
+            <div class="password-container">
+                <div id="password-one-container">
                     <span class="password-one"></span>
-                    <button class="btn password-container__button-one" id="password-one-button">Copy</button>
+                    <button id="password-one-button">Copy</button>
                 </div>
                 
-                <div class="password-container__two" id="password-two-container">
+                <div id="password-two-container">
                     <span class="password-two"></span>
-                    <button class="btn password-container__button-two" id="password-two-button">Copy</button>
+                    <button id="password-two-button">Copy</button>
                 </div>
             </div>
         </div>

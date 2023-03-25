@@ -15,7 +15,7 @@ This project is to create a website that allows user to configure a password.
 - Restyle the input box and the checkboxes 
 - Change the color of the button and the mouse on hover 
 - Light mode, dark mode
-- Restyle the copy button
+- Restyle the copy button (have it flash copied when clicked)
 
 
 ## Post Project Thoughts

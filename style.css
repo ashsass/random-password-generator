@@ -14,7 +14,7 @@ body {
     box-sizing: border-box;
 }
 
-.container {
+.root {
     position: fixed;
     top: auto;
     bottom: 0;
@@ -39,7 +39,7 @@ h1 {
     line-height: 4rem;
 }
 
-h1 .heading__color {
+h1 > span {
     color: #4ADF86;
 }
 
@@ -48,25 +48,14 @@ hr {
     border: .1rem solid #2F3E53;
 }
 
-.heading__sentence-one, 
-.heading__sentence-two {
+.heading > p {
     color: #D5D4D8;
     font-size: 2rem;
     font-family: "Inter";
     font-weight: 300;
 }
 
-.heading__sentence-two, .password-container {
-    margin-top: 4rem;
-}
-
-.heading__sentence-two {
-    display: flex;
-    justify-content: flex-start;
-    width: 40rem;
-    align-items: center;
-    margin-bottom: 1rem;
-}
+/* Need to work on spacing because refactoring the html/css showed me I have overcomplicated a lot of the code. Need to simplify my process */
 
 #password-length {
     margin-left: .5rem;
@@ -74,8 +63,7 @@ hr {
 }
 
 .password-button, 
-.password-container, 
-.heading__sentence-one {
+.password-container {
     margin-bottom: 4rem;
 }
 
@@ -94,7 +82,7 @@ hr {
     margin-left: 2rem;
  }
 
-.btn {
+button {
     background-color: rgb(16, 185, 129);
     color: #ffffff;
     padding: 1rem 2rem;
@@ -146,8 +134,7 @@ hr {
 }
 
 
-.password-container__one, 
-.password-container__two {
+.password-container > div {
     background-color: #273549;
     color: #55F991;
     margin-bottom: .5rem;
@@ -160,11 +147,7 @@ hr {
     padding-top: 1rem;
 }
 
-.password-container__button-one,
-.password-container__button-two {
-    margin-bottom: 1rem;
-    padding: .5rem 2rem;
-}
+
 
 .copied-box {
     height: 3rem;
