@@ -29,7 +29,7 @@ h1 {
     color: #ffffff;
     font-size: 4rem;
     margin-bottom: 1rem;
-    font-family: "Karla";
+    font-family: "Karla", sans-serif;
     font-weight: 800;
     line-height: 4rem;
 }
@@ -38,10 +38,6 @@ h1 > span {
     color: #4ADF86;
 }
 
-hr {
-    color: #2F3E53;
-    border: .1rem solid #2F3E53;
-}
 
 .heading > p {
     color: #D5D4D8;
@@ -52,19 +48,6 @@ hr {
 
 
 /* Password generator */
-input#password-length {
-    background: #D5D4D8;
-    padding:  0.4rem .4rem;
-    border-radius: 0.5rem;
-    width: 5rem;
-    min-height: 2rem;
-}
-
-input[type=number]::-webkit-inner-spin-button {
-    opacity: 1;
-    background: #10b981;
-}
-
 .toggle-label-numbers, .toggle-label-symbols {
     color: #D5D4D8;
     font-size: 1.6rem;
@@ -93,6 +76,7 @@ button {
     line-height: 2.4rem;
     display: inline-block;
     cursor: pointer;
+    margin: 2rem 0;
 }
 
 
@@ -103,11 +87,6 @@ button {
 
 .password-button-container {
     display: flex;
-}
-
-.generate-password-button {
-    width: 21.5rem;
-    margin: 2rem 0;
 }
 
 .hidden {
@@ -129,6 +108,8 @@ button {
 
 hr {
     width: 100%;
+    color: #2F3E53;
+    border: .1rem solid #2F3E53;
 }
 
 
