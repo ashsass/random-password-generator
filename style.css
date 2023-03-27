@@ -4,7 +4,7 @@
 }
 
 html {
-    font-size: 10px;
+    font-size: 66%;
 }
 
 body {
@@ -16,7 +16,7 @@ body {
 .root {
     margin: auto;
     margin-top: 15%;
-    width: 45rem;
+    width: 55rem;
     height: 80vh;
 }
 
@@ -49,8 +49,6 @@ hr {
     font-family: "Inter";
     font-weight: 300;
 }
-
-
 
 
 /* Password generator */
@@ -91,7 +89,7 @@ button {
     border-radius: .6rem;
     border: none;
     font-family: 'Inter';
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     line-height: 2.4rem;
     display: inline-block;
     cursor: pointer;
@@ -158,13 +156,14 @@ hr {
 }
 
 #password-container > span {
-    display: none;
 }
 
 #password-container > div {
     color: #D5D4D8;
     cursor: pointer;
 }
+
+
 
 
 
