@@ -1,5 +1,4 @@
 * {
-    margin: 0;
     padding: 0;
     box-sizing: inherit;
 }
@@ -57,35 +56,38 @@ hr {
 /* Password generator */
 input#password-length {
     background: #D5D4D8;
-    padding:  0.2rem .5rem;
+    padding:  0.4rem .4rem;
     border-radius: 0.5rem;
     width: 5rem;
     min-height: 2rem;
 }
 
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+    background: rgb(16, 185, 129);
+}
+
 .toggle-label-numbers, .toggle-label-symbols {
     color: #D5D4D8;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-family: "Inter";
     font-weight: 200;
 }
-
-.checkbox {
-    margin-left: .5rem;
-    background-color: #4ADF86;
-}
-
- 
 
 .toggle-label-numbers {
     margin-left: 2rem;
  }
 
+ .checkbox {
+    accent-color: #55F991;
+ }
+
+
 button {
-    background-color: rgb(16, 185, 129);
+    background-color: #10b981;
     color: #ffffff;
     padding: 1rem 2rem;
-    box-shadow: .3rem .3rem .1rem rgb(39, 163, 124);
+    box-shadow: .3rem .3rem .1rem #27a37c;
     border-radius: .6rem;
     border: none;
     font-family: 'Inter';
@@ -96,7 +98,7 @@ button {
 
 .btn:active {
     transform: translate(.4rem, .4rem);
-    box-shadow: 0 .1rem .2rem rgba(0, 0, 0, .2);
+    box-shadow: 0 .1rem .2rem #00000033;
 }
 
 .password-button-container {
@@ -105,7 +107,7 @@ button {
 
 .hidden {
     color: #55F991;
-    background: rgba(255, 255, 255, .3);
+    background: #ffffff4d;
     margin-left: 1rem;
     height: 5rem;
     width: 12rem;
