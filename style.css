@@ -76,14 +76,20 @@ input#password-length {
 }
 
 input[type="checkbox"] {
-    /* Add if not using autoprefixer */
-    -webkit-appearance: none;
     appearance: none;
     /* For iOS < 15 to remove gradient background */
     background-color: #fff;
-    /* Not removed via appearance */
-    margin: 0;
+    margin: 0; 
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
   }
+
+ 
 
 .toggle-label-numbers {
     margin-left: 2rem;
