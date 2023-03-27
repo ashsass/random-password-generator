@@ -1,6 +1,5 @@
 import { characters } from "./characters.js"
 const passwordBtn = document.querySelector('.generate-password-button')
-const passwordContainer = document.querySelectorAll('#password-container')
 
 
 //Event Listeners
@@ -31,29 +30,17 @@ function renderCharacter() {
 
 
 //Copy-on-click
+//Want to figure out how to just focus on the password container and not use document for this
 document.addEventListener('click', copyOnClick)
 
-function copyOnClick(e){``
-    navigator.clipboard.writeText(document.querySelector(`.${e.target.className}`).textContent)
+function copyOnClick(e){
+    const passwordToCopy = document.querySelector(`.${e.target.className}`)
+    const copiedMessage = document.querySelector(`.${e.target.className}-copied`)
+
+    navigator.clipboard.writeText(passwordToCopy.textContent)
+    copiedMessage.classList.add('show-copied')
+
+    setTimeout(function() {
+        copiedMessage.classList.remove('show-copied')
+    }, 1500)
 }
-
-
-
-/*
-copyPasswordOne.addEventListener("click", function(e) {
-    copyOnClick(e.target.id)
-})
-
-copyPasswordTwo.addEventListener("click", function(e) {
-    copyOnClick(e.target.id)
-})
-
-function copyOnClick(passwordId) {
-    if (passwordId === 'password-two-button'){
-        navigator.clipboard.writeText(passwordTwoEl.textContent);
-    } else if (passwordId === 'password-one-button'){
-        navigator.clipboard.writeText(passwordOneEl.textContent);
-    }
-}
-
-*/

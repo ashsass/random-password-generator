@@ -21,7 +21,7 @@ body {
 }
 
 /* Heading */ 
-.heading, .password-container{
+.heading {
     background-color: #1F2937;
 }
 
@@ -121,7 +121,7 @@ hr {
     margin-top: 2rem;
 }
 
-#password-container {
+.password-container {
     display: flex;
     gap: 1rem;
     justify-content: center;
@@ -136,14 +136,24 @@ hr {
     padding-top: 1rem;
 }
 
-#password-container > span {
+.password-container > span {
     cursor: pointer;
 }
 
-#password-container > div {
+.password-two-copied,
+.password-one-copied {
     color: #D5D4D8;
+    overflow: hidden;  /* Hide the element content, while height = 0 */
+    width: 0;
+    opacity: 0;
 }
 
+.show-copied {
+    width: auto; 
+    opacity: 1;
+    transition: width 0ms 100ms, opacity 600ms 0ms;
+    color: white;
+}
 
 
 

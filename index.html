@@ -5,6 +5,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
@@ -34,19 +37,19 @@
                     <button class="generate-password-button">Generate Passwords</button>
                     <div class="message-box hidden" id="error-message">Please enter a password length</div>
                 </div>
-                <hr>
+                
             </div>
             
-            
+            <hr>
             <div class="passwords-container">
-                <div id="password-container">
+                <div class="password-container">
                     <span class="password-one"></span>
-                    <div id="password-one-button"></div>
+                    <i  class=" fa-solid fa-check password-one-copied"></i>
                 </div>
                 
-                <div id="password-container">
+                <div class="password-container">
                     <span class="password-two"></span>
-                    <div id="password-two-button"></div>
+                    <i  class=" fa-solid fa-check password-two-copied"></i>
                 </div>
             </div>
         </div>
