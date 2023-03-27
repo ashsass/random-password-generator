@@ -137,11 +137,11 @@ hr {
 }
 
 #password-container > span {
+    cursor: pointer;
 }
 
 #password-container > div {
     color: #D5D4D8;
-    cursor: pointer;
 }
 
 

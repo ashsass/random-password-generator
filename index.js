@@ -1,39 +1,23 @@
 const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
-
-const passwordLength = document.getElementById("password-length")
-const generatePasswordBtn = document.getElementById("generate-password-button")
-const messageBox = document.getElementById("error-message")
-const passwordOneContainer = document.getElementById("password-one-container")
-const passwordTwoContainer = document.getElementById("password-two-container")
-const passwordOne = document.querySelector('.password-one')
-const passwordTwo = document.querySelector('.password-two')
-const copyPasswordOne = document.getElementById("password-one-button")
-const copyPasswordTwo = document.getElementById("password-two-button")
+const passwordBtn = document.querySelector('.generate-password-button')
 
 
-generatePasswordBtn.addEventListener('click', renderPassword)
+passwordBtn.addEventListener('click', renderPassword)
 
 function renderPassword() {
     const passwords = document.querySelectorAll('.password-one, .password-two')
 
-    if(passwordLength.value){
-        passwords.forEach(password => {
-            password.textContent = '';
-        })
-    
-        passwords.forEach(password => {
-            for(let i = 0; i < passwordLength.value; i++){
-                password.textContent += renderCharacter()
-            }
-        })
-    }else {
-        messageBox.style.display = "inline-block";
-        messageBox.innerText = "Please enter a password length"
-        setTimeout(() => {
-            messageBox.style.display = "none";
-        }, 1500);
-    }   
-    }
+    passwords.forEach(password => {
+        password.textContent = '';
+    })
+
+    passwords.forEach(password => {
+        for(let i = 0; i <= 17; i++){
+            password.textContent += renderCharacter()
+        }
+    })
+}
+
 
 
 function renderCharacter() {
@@ -91,7 +75,7 @@ passwordBtn.addEventListener('click', function() {
         
         }
 });
-*/
+
 
 
 //Copy-on-click function
@@ -119,3 +103,5 @@ function copyOnClick(passwordId) {
 //really need to change the id and class names they are out of control
 //the span class for the id is working but i can't get it to display properly
 //Use classList to toggle the hidden messages
+
+*/
