@@ -16,7 +16,7 @@ body {
 .root {
     margin: auto;
     margin-top: 15%;
-    width: 40rem;
+    width: 45rem;
     height: 80vh;
 }
 
@@ -50,7 +50,7 @@ hr {
     font-weight: 300;
 }
 
-/* Need to work on spacing because refactoring the html/css showed me I have overcomplicated a lot of the code. Need to simplify my process */
+
 
 
 /* Password generator */
@@ -64,7 +64,7 @@ input#password-length {
 
 input[type=number]::-webkit-inner-spin-button {
     opacity: 1;
-    background: rgb(16, 185, 129);
+    background: #10b981;
 }
 
 .toggle-label-numbers, .toggle-label-symbols {
@@ -79,9 +79,9 @@ input[type=number]::-webkit-inner-spin-button {
  }
 
  .checkbox {
+    cursor: pointer;
     accent-color: #55F991;
  }
-
 
 button {
     background-color: #10b981;
@@ -94,7 +94,9 @@ button {
     font-size: 1.6rem;
     line-height: 2.4rem;
     display: inline-block;
+    cursor: pointer;
 }
+
 
 .btn:active {
     transform: translate(.4rem, .4rem);
@@ -103,6 +105,11 @@ button {
 
 .password-button-container {
     display: flex;
+}
+
+.generate-password-button {
+    width: 21.5rem;
+    margin: 2rem 0;
 }
 
 .hidden {
@@ -122,36 +129,42 @@ button {
     margin-top: 1rem;
 }
 
-
-.generate-password-button {
-    width: 21.5rem;
-    margin-top: 1rem;
+hr {
+    width: 100%;
 }
+
 
 
 /* Rendered passwords */
-.password-container {
+.passwords-container {
     display: flex;
-    flex-wrap: wrap;
-    width: 45rem
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
-.password-container > div {
+#password-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
     background-color: #273549;
     color: #55F991;
     margin-bottom: .5rem;
-    width: 21.1rem;
+    width: 23em;
     height: 3.9rem;
     border-radius: .6rem;
     text-align: center;
-    font-size: 1.8rem;
-    display: inline-block;
+    font-size: 1.9rem;
     padding-top: 1rem;
 }
 
-.copied-box {
-    height: 3rem;
-    width: auto;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
+#password-container > span {
+    display: none;
 }
+
+#password-container > div {
+    color: #D5D4D8;
+    cursor: pointer;
+}
+
+
+
