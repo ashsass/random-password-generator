@@ -3,6 +3,12 @@ const passwordBtn = document.querySelector('.generate-password-button')
 const symbolCheckbox = document.querySelector('#symbols')
 const numbersCheckbox = document.querySelector('#numbers')
 
+const LETTER_CHAR = filterArray(0, 51)
+const NUMBER_CHAR = filterArray(52, 61)
+const SYMBOL_CHAR = filterArray(62, 90)
+const noNumbers = LETTER_CHAR.concat(SYMBOL_CHAR)
+const noSymbols = LETTER_CHAR.concat(NUMBER_CHAR)
+
 
 //Event Listeners
 passwordBtn.addEventListener('click', renderPassword)
@@ -22,66 +28,45 @@ function renderPassword() {
     })
 }
 
+
+
 function renderCharacter() {
-    let randomNumber = array => Math.floor(Math.random() * array.length)
     let randomChar = '';
     const isSymbols = symbolCheckbox.checked
     const isNumbers = numbersCheckbox.checked
-
-    function filterSymbols(){
-        const noSymbolsArray = characters.filter(item => {
-            if(characters.indexOf(item) >= 0 && characters.indexOf(item) <= 61){
-                return item;
-            }
-        })
-        return noSymbolsArray
-    }
-    
-    function filterNumbers(){
-        const noNumbersArray = characters.filter(item => {
-            if(characters.indexOf(item) <= 51 || characters.indexOf(item) >= 61){
-                return item
-            }
-        })
-        return noNumbersArray
-    }
-
-    function filterNumbersAndSymbols(){
-        const onlyLetters = characters.filter(item => {
-            if(characters.indexOf(item) <= 51){
-                return item
-            }
-        })
-        return onlyLetters
-    }
     
 
-    
     //No numbers or symbols
     if(!isNumbers && !isSymbols){
-        console.log('In letters only')
-        randomChar = characters[randomNumber(filterNumbersAndSymbols())]
+        randomChar = characters[randomNumber(LETTER_CHAR)]
         return randomChar
     }
     //No symbols
     else if(!isSymbols){
-        console.log('In no symbols else if')
-        randomChar = characters[randomNumber(filterSymbols())]
+        randomChar = noSymbols[randomNumber(noSymbols)]
         return randomChar
     } 
     //No numbers
     else if(!isNumbers){
-        console.log('In no numbers else if')
-        randomChar = characters[randomNumber(filterNumbers())]
+        randomChar = noNumbers[randomNumber(noNumbers)]
         return randomChar
     }
     //Everything 
     else {
-        console.log('in the default')
         randomChar = characters[randomNumber(characters)]
         return randomChar
     }
 }
+
+function filterArray(low, high) {
+    const filteredArray = []
+    for(let i = low; i <= high; i++){
+        filteredArray.push(characters[i])
+    } 
+    return filteredArray
+}
+
+const randomNumber = array => Math.floor(Math.random() * array.length)
 
 
 //Copy-on-click
