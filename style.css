@@ -48,14 +48,14 @@ h1 > span {
 
 
 /* Password generator */
-.toggle-label-numbers, .toggle-label-symbols {
+.symbols, .numbers {
     color: #D5D4D8;
     font-size: 1.6rem;
     font-family: "Inter";
     font-weight: 200;
 }
 
-.toggle-label-numbers {
+.numbers {
     margin-left: 2rem;
  }
 
@@ -80,7 +80,7 @@ button {
 }
 
 
-.btn:active {
+button:active {
     transform: translate(.4rem, .4rem);
     box-shadow: 0 .1rem .2rem #00000033;
 }
