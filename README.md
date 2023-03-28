@@ -1,6 +1,8 @@
-# View the website [here](https://ashsass-random-password.netlify.app/)
-
 # Random Number Generator
+
+## View the website [here](https://ashsass-random-password.netlify.app/)
+![Screenshot of the random password generator website.](./img/Random%20Password%20Generator.png)
+
 ## A Solo Project from Scrimba
 This project is to create a website that allows user to configure a password.
 
