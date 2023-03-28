@@ -1,5 +1,4 @@
-# View the website here:
-https://ashsass-random-password.netlify.app/
+# View the website [here](https://ashsass-random-password.netlify.app/)
 
 # Random Number Generator
 ## A Solo Project from Scrimba
