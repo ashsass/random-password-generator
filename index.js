@@ -22,12 +22,11 @@ function renderPassword() {
     })
 }
 
-
 function renderCharacter() {
     let randomNumber = array => Math.floor(Math.random() * array.length)
     let randomChar = '';
     const isSymbols = symbolCheckbox.checked
-    const isNumbers = symbolCheckbox.checked
+    const isNumbers = numbersCheckbox.checked
 
     function filterSymbols(){
         const noSymbolsArray = characters.filter(item => {
@@ -38,18 +37,51 @@ function renderCharacter() {
         return noSymbolsArray
     }
     
-    //No symbols
-    if(!isSymbols){
-        randomChar = characters[randomNumber(filterSymbols())]
-        return randomChar
+    function filterNumbers(){
+        const noNumbersArray = characters.filter(item => {
+            if(characters.indexOf(item) <= 51 || characters.indexOf(item) >= 61){
+                return item
+            }
+        })
+        return noNumbersArray
     }
 
-    //No numbers
-
-    //Only letters
+    function filterNumbersAndSymbols(){
+        const onlyLetters = characters.filter(item => {
+            if(characters.indexOf(item) <= 51){
+                return item
+            }
+        })
+        return onlyLetters
+    }
     
-}
 
+    
+    //No numbers or symbols
+    if(!isNumbers && !isSymbols){
+        console.log('In letters only')
+        randomChar = characters[randomNumber(filterNumbersAndSymbols())]
+        return randomChar
+    }
+    //No symbols
+    else if(!isSymbols){
+        console.log('In no symbols else if')
+        randomChar = characters[randomNumber(filterSymbols())]
+        return randomChar
+    } 
+    //No numbers
+    else if(!isNumbers){
+        console.log('In no numbers else if')
+        randomChar = characters[randomNumber(filterNumbers())]
+        return randomChar
+    }
+    //Everything 
+    else {
+        console.log('in the default')
+        randomChar = characters[randomNumber(characters)]
+        return randomChar
+    }
+}
 
 
 //Copy-on-click
