@@ -34,28 +34,15 @@ function renderCharacter() {
     let randomChar = '';
     const isSymbols = symbolCheckbox.checked
     const isNumbers = numbersCheckbox.checked
-    
-
     //No numbers or symbols
-    if(!isNumbers && !isSymbols){
-        randomChar = characters[randomNumber(LETTER_CHAR)]
-        return randomChar
-    }
+    if(!isNumbers && !isSymbols){ randomChar = characters[randomNumber(LETTER_CHAR)]}
     //No symbols
-    else if(!isSymbols){
-        randomChar = noSymbols[randomNumber(noSymbols)]
-        return randomChar
-    } 
+    else if(!isSymbols){ randomChar = noSymbols[randomNumber(noSymbols)]} 
     //No numbers
-    else if(!isNumbers){
-        randomChar = noNumbers[randomNumber(noNumbers)]
-        return randomChar
-    }
+    else if(!isNumbers){ randomChar = noNumbers[randomNumber(noNumbers)]}
     //Everything 
-    else {
-        randomChar = characters[randomNumber(characters)]
-        return randomChar
-    }
+    else { randomChar = characters[randomNumber(characters)]}
+    return randomChar
 }
 
 function filterArray(low, high) {
