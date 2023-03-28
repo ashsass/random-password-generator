@@ -1,7 +1,5 @@
 import { characters } from "./characters.js"
 const passwordBtn = document.querySelector('.generate-password-button')
-const isSymbols = document.getElementById('symbols').checked 
-const isNumbers = document.getElementById('numbers').checked
 
 
 
@@ -29,16 +27,6 @@ function renderCharacter() {
     let randomChar = characters[randomNumber]
     return randomChar
 }
-
-function filterSymbols(){
-    const noSymbolsArray = characters.filter(item => {
-        if(characters.indexOf(item) >= 0 && characters.indexOf(item) <= 61){
-            return item;
-        }
-    })
-}
-
-
 
 //Copy-on-click
 //Want to figure out how to just focus on the password container and not use document for this
