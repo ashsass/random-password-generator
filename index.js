@@ -1,6 +1,7 @@
 import { characters } from "./characters.js"
 const passwordBtn = document.querySelector('.generate-password-button')
-
+const symbolCheckbox = document.querySelector('#symbols')
+const numbersCheckbox = document.querySelector('#numbers')
 
 
 //Event Listeners
@@ -23,10 +24,33 @@ function renderPassword() {
 
 
 function renderCharacter() {
-    let randomNumber = Math.floor(Math.random() * characters.length)
-    let randomChar = characters[randomNumber]
-    return randomChar
+    let randomNumber = array => Math.floor(Math.random() * array.length)
+    let randomChar = '';
+    const isSymbols = symbolCheckbox.checked
+    const isNumbers = symbolCheckbox.checked
+
+    function filterSymbols(){
+        const noSymbolsArray = characters.filter(item => {
+            if(characters.indexOf(item) >= 0 && characters.indexOf(item) <= 61){
+                return item;
+            }
+        })
+        return noSymbolsArray
+    }
+    
+    //No symbols
+    if(!isSymbols){
+        randomChar = characters[randomNumber(filterSymbols())]
+        return randomChar
+    }
+
+    //No numbers
+
+    //Only letters
+    
 }
+
+
 
 //Copy-on-click
 //Want to figure out how to just focus on the password container and not use document for this
