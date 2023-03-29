@@ -28,8 +28,6 @@ function renderPassword() {
     })
 }
 
-
-
 function renderCharacter() {
     let randomChar = '';
     const isSymbols = symbolCheckbox.checked
