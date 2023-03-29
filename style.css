@@ -77,8 +77,12 @@ button {
     display: inline-block;
     cursor: pointer;
     margin: 2rem 0;
+    transition: backround-color 1s;
 }
 
+button:hover {
+    background-color: #14E8A2;
+}
 
 button:active {
     transform: translate(.4rem, .4rem);
