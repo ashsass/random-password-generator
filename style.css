@@ -77,7 +77,7 @@ button {
     display: inline-block;
     cursor: pointer;
     margin: 2rem 0;
-    transition: backround-color 1s;
+    transition: background-color 1s;
 }
 
 button:hover {
