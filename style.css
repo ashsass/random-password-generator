@@ -25,6 +25,18 @@ body {
     background-color: #1F2937;
 }
 
+i.fa-solid.fa-moon {
+    background: #4ADF86;
+    font-size: 2rem;
+    line-height: 1;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.6rem;
+    border-radius: 50%;
+    cursor: pointer;
+    float: right;
+}
+
 h1 {
     color: #ffffff;
     font-size: 4rem;
@@ -93,29 +105,11 @@ button:active {
     display: flex;
 }
 
-.hidden {
-    color: #55F991;
-    background: #ffffff4d;
-    margin-left: 1rem;
-    height: 5rem;
-    width: 12rem;
-    text-align: center;
-    font-size: 1.5rem;
-    padding-top: 0.5rem;
-    border-radius: 1rem;
-    display: none;
-}
-
-.message-box {
-    margin-top: 1rem;
-}
-
 hr {
     width: 100%;
     color: #2F3E53;
     border: .1rem solid #2F3E53;
 }
-
 
 
 /* Rendered passwords */
@@ -158,6 +152,22 @@ hr {
     transition: width 0ms 100ms, opacity 600ms 0ms;
     color: white;
 }
+
+
+/* Light mode */
+body.light,
+.heading.light {
+    background: #A1F7C0;
+}
+
+h1.light{
+    color: #1F2937;
+}
+
+span.light {
+    color: #f8f9fa;
+}
+
 
 
 
