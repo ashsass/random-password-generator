@@ -160,12 +160,23 @@ body.light,
     background: #A1F7C0;
 }
 
-h1.light{
+h1.light,
+p.light,
+label.light{
     color: #1F2937;
 }
 
-span.light {
-    color: #f8f9fa;
+h1 > span.light {
+    color: #F7A1D8;
+}
+
+button.light {
+    background: #314158;
+    box-shadow: .3rem .3rem .1rem #394555;
+}
+
+.password-container.light {
+    background: #66BE85;
 }
 
 
