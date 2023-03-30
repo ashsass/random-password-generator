@@ -21,6 +21,7 @@ This project is to create a website that allows user to configure a password.
 - [ x ] Change the color of the button and the mouse on hover 
 - [ x ] Light mode, dark mode
 - [ x ] Media queries and sizing issues in general
+- [ ] Enable local storage to hold on to light/dark preference
 
 
 ## Post Project Thoughts
