@@ -2,6 +2,7 @@ import { characters } from "./characters.js"
 const passwordBtn = document.querySelector('.generate-password-button')
 const symbolCheckbox = document.querySelector('#symbols')
 const numbersCheckbox = document.querySelector('#numbers')
+const toggleBtn = document.getElementById('toggle-button')
 
 const LETTER_CHAR = filterArray(0, 51)
 const NUMBER_CHAR = filterArray(52, 61)
@@ -13,13 +14,13 @@ const noSymbols = LETTER_CHAR.concat(NUMBER_CHAR)
 //Event Listeners
 passwordBtn.addEventListener('click', renderPassword)
 document.addEventListener('click', copyOnClick)
+toggleBtn.addEventListener('click', toggleMode)
 
 //Light-dark toggle
 function toggleMode() {
-    const toggleBtn = document.getElementById('toggle-button')
-    
-
-
+    document.body.classList.toggle('light')
+    toggleBtn.classList.toggle('fa-moon')
+    toggleBtn.classList.toggle('fa-sun')
 }
 
 //Creating a password by first rendering a random character and then using a loop to create a string for the full password

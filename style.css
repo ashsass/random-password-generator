@@ -25,7 +25,7 @@ body {
     background-color: #1F2937;
 }
 
-i.fa-solid.fa-moon {
+#toggle-button {
     background: #4ADF86;
     font-size: 2rem;
     line-height: 1;
@@ -36,6 +36,7 @@ i.fa-solid.fa-moon {
     cursor: pointer;
     float: right;
 }
+
 
 h1 {
     color: #ffffff;
@@ -157,30 +158,27 @@ hr {
 /* Light mode */
 body,
 .heading,
-i.fa-solid.fa-moon.light,
+#toggle-button,
 h1, 
 p, label ,
 .password-container > span, 
 button, .password-container {
-    transition: background-color 1s, color 1s, box-shadow 1s;
+    transition: background-color 1.5s, color 1.5s, box-shadow 1.5s;
 }
 
-
-
 body.light 
-.heading, body {
+.heading, body.light {
     background: #d0ebff;
 }
 
 
-body.light i.fa-solid.fa-moon {
+body.light #toggle-button {
     background: #4159D4;
     color: #ffffff;
 }
 
-body.light label, h1, 
-.password-container > span{
-    color: #1F2937;
+body.light h1 {
+    color: #1f2937;
 }
 
 body.light p {
@@ -191,6 +189,10 @@ body.light h1 > span {
     color: #4159D4;
 }
 
+body.light label{
+    color: #1F2937;
+}
+
 body.light button {
     background: #314158;
     box-shadow: .3rem .3rem .1rem #394555;
@@ -198,6 +200,10 @@ body.light button {
 
 body.light .password-container {
     background: #90ADC3;
+}
+
+body.light .password-container > span{
+    color: #1F2937
 }
 
 
