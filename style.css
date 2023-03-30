@@ -155,13 +155,25 @@ hr {
 
 
 /* Light mode */
+body,
+.heading,
+i.fa-solid.fa-moon.light,
+h1, 
+p, label ,
+.password-container > span, 
+button, .password-container {
+    transition: background-color 1s, color 1s, box-shadow 1s;
+}
+
+
+
 body.light,
 .heading.light {
     background: #d0ebff;
 }
 
 
-i.fa-solid.fa-moon {
+i.fa-solid.fa-moon.light {
     background: #4159D4;
     color: #ffffff;
 }
