@@ -21,6 +21,7 @@ body {
     min-width: 70rem;
 }
 
+
 /* Heading */ 
 .heading {
     background-color: #1F2937;
@@ -38,7 +39,6 @@ body {
     float: right;
 }
 
-
 h1 {
     color: #ffffff;
     font-size: 4rem;
@@ -51,7 +51,6 @@ h1 {
 h1 > span {
     color: #4ADF86;
 }
-
 
 .heading > p {
     color: #D5D4D8;
@@ -172,7 +171,6 @@ body.light
     background: #d0ebff;
 }
 
-
 body.light #toggle-button {
     background: #4159D4;
     color: #ffffff;
@@ -195,8 +193,8 @@ body.light label{
 }
 
 body.light button {
-    background: #314158;
-    box-shadow: .3rem .3rem .1rem #394555;
+    background: #4159D4;
+    box-shadow: .3rem .3rem .1rem #4b61d0;
 }
 
 body.light .password-container {

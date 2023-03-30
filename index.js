@@ -2,7 +2,7 @@ import { characters } from "./characters.js"
 const passwordBtn = document.querySelector('.generate-password-button')
 const symbolCheckbox = document.querySelector('#symbols')
 const numbersCheckbox = document.querySelector('#numbers')
-const passwordContainer = document.querySelector('.password-container')
+const passwordContainer = document.querySelector('.passwords-container')
 const toggleBtn = document.getElementById('toggle-button')
 
 const LETTER_CHAR = filterArray(0, 51)
