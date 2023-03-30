@@ -160,7 +160,7 @@ body,
 .heading,
 #toggle-button,
 h1, 
-p, label ,
+p, label , .checkbox,
 .password-container > span, 
 button, .password-container {
     transition: background-color 1.5s, color 1.5s, box-shadow 1.5s;
@@ -190,6 +190,10 @@ body.light h1 > span {
 
 body.light label{
     color: #1F2937;
+}
+
+body.light .checkbox{
+    accent-color: #596bc7;
 }
 
 body.light button {
