@@ -157,17 +157,24 @@ hr {
 /* Light mode */
 body.light,
 .heading.light {
-    background: #A1F7C0;
+    background: #d0ebff;
+}
+
+
+i.fa-solid.fa-moon {
+    background: #4159D4;
+    color: #ffffff;
 }
 
 h1.light,
 p.light,
-label.light{
+label.light,
+.password-container > span.light{
     color: #1F2937;
 }
 
 h1 > span.light {
-    color: #F7A1D8;
+    color: #4159D4;
 }
 
 button.light {
@@ -176,7 +183,7 @@ button.light {
 }
 
 .password-container.light {
-    background: #66BE85;
+    background: #90ADC3;
 }
 
 
