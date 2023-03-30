@@ -2,8 +2,8 @@ import { characters } from "./characters.js"
 const passwordBtn = document.querySelector('.generate-password-button')
 const symbolCheckbox = document.querySelector('#symbols')
 const numbersCheckbox = document.querySelector('#numbers')
+const passwordContainer = document.querySelector('.password-container')
 const toggleBtn = document.getElementById('toggle-button')
-const root = document.querySelector('.root')
 
 const LETTER_CHAR = filterArray(0, 51)
 const NUMBER_CHAR = filterArray(52, 61)
@@ -13,16 +13,9 @@ const noSymbols = LETTER_CHAR.concat(NUMBER_CHAR)
 
 
 //Event Listeners
-/*
-root.addEventListener('click', function(e){
-    if(e.target.className === 'generate-password-button'){ renderPassword }
-    else if(e.target.className === ''){ copyOnClick}
-    else if(e.target.className === 'toggle') { toggleMode }
-}) */
-
 passwordBtn.addEventListener('click', renderPassword)
-document.addEventListener('click', copyOnClick)
-toggleBtn.addEventListener('click', toggleMode)
+passwordContainer.addEventListener('click', copyOnClick)
+toggleBtn.addEventListener('click', toggleMode) 
 
 //Light-dark toggle
 function toggleMode() {
