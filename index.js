@@ -14,6 +14,13 @@ const noSymbols = LETTER_CHAR.concat(NUMBER_CHAR)
 passwordBtn.addEventListener('click', renderPassword)
 document.addEventListener('click', copyOnClick)
 
+//Light-dark toggle
+function toggleMode() {
+    const toggleBtn = document.getElementById('toggle-button')
+    
+
+
+}
 
 //Creating a password by first rendering a random character and then using a loop to create a string for the full password
 function renderPassword() {
