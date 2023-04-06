@@ -17,8 +17,18 @@ passwordBtn.addEventListener('click', renderPassword)
 passwordContainer.addEventListener('click', copyOnClick)
 toggleBtn.addEventListener('click', toggleMode) 
 
+//Local Storage
+let isLightMode = localStorage.getItem('lightMode') === 'yes' ? true : false
+isLightMode && toggleColors()
+
 //Light-dark toggle
 function toggleMode() {
+    isLightMode = !isLightMode
+    localStorage.setItem('lightMode', isLightMode ? 'yes' : 'no') 
+    toggleColors()
+}
+
+function toggleColors() {
     document.body.classList.toggle('light')
     toggleBtn.classList.toggle('fa-moon')
     toggleBtn.classList.toggle('fa-sun')
@@ -64,7 +74,6 @@ const randomNumber = array => Math.floor(Math.random() * array.length)
 
 
 //Copy-on-click
-//Want to figure out how to just focus on the password container and not use document for this
 function copyOnClick(e){
     const passwordToCopy = document.querySelector(`.${e.target.className}`)
     const copiedMessage = document.querySelector(`.${e.target.className}-copied`)

@@ -25,6 +25,8 @@ body {
 /* Heading */ 
 .heading {
     background-color: #1F2937;
+    display: flex;
+    flex-direction: column;
 }
 
 #toggle-button {
@@ -36,7 +38,7 @@ body {
     padding: 0.6rem;
     border-radius: 50%;
     cursor: pointer;
-    float: right;
+    margin-left: auto;
 }
 
 h1 {
@@ -81,9 +83,9 @@ button {
     background-color: #10b981;
     color: #ffffff;
     padding: 1rem 2rem;
-    box-shadow: .3rem .3rem .1rem #27a37c;
     border-radius: .6rem;
     border: none;
+    width: 50%;
     font-family: 'Inter';
     font-size: 1.8rem;
     line-height: 2.4rem;
@@ -102,12 +104,7 @@ button:active {
     box-shadow: 0 .1rem .2rem #00000033;
 }
 
-.password-button-container {
-    display: flex;
-}
-
 hr {
-    width: 100%;
     color: #2F3E53;
     border: .1rem solid #2F3E53;
 }
