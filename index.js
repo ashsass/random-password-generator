@@ -17,8 +17,18 @@ passwordBtn.addEventListener('click', renderPassword)
 passwordContainer.addEventListener('click', copyOnClick)
 toggleBtn.addEventListener('click', toggleMode) 
 
+//Local Storage
+let isLightMode = localStorage.getItem('lightMode') === 'yes' ? true : false
+isLightMode && toggleColors()
+
 //Light-dark toggle
 function toggleMode() {
+    isLightMode = !isLightMode
+    localStorage.setItem('lightMode', isLightMode ? 'yes' : 'no') 
+    toggleColors()
+}
+
+function toggleColors() {
     document.body.classList.toggle('light')
     toggleBtn.classList.toggle('fa-moon')
     toggleBtn.classList.toggle('fa-sun')
