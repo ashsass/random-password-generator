@@ -74,7 +74,6 @@ const randomNumber = array => Math.floor(Math.random() * array.length)
 
 
 //Copy-on-click
-//Want to figure out how to just focus on the password container and not use document for this
 function copyOnClick(e){
     const passwordToCopy = document.querySelector(`.${e.target.className}`)
     const copiedMessage = document.querySelector(`.${e.target.className}-copied`)

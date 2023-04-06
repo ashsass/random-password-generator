@@ -81,7 +81,6 @@ button {
     background-color: #10b981;
     color: #ffffff;
     padding: 1rem 2rem;
-    box-shadow: .3rem .3rem .1rem #27a37c;
     border-radius: .6rem;
     border: none;
     font-family: 'Inter';
@@ -100,10 +99,6 @@ button:hover {
 button:active {
     transform: translate(.4rem, .4rem);
     box-shadow: 0 .1rem .2rem #00000033;
-}
-
-.password-button-container {
-    display: flex;
 }
 
 hr {
