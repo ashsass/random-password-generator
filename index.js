@@ -63,11 +63,7 @@ function renderCharacter() {
 }
 
 function filterArray(low, high) {
-    const filteredArray = []
-    for(let i = low; i <= high; i++){
-        filteredArray.push(characters[i])
-    } 
-    return filteredArray
+    return characters.slice(low, high+1)
 }
 
 const randomNumber = array => Math.floor(Math.random() * array.length)
