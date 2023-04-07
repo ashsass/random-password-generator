@@ -23,12 +23,6 @@ body {
 
 
 /* Heading */ 
-/* .heading {
-    background-color: #1F2937;
-    display: flex;
-    flex-direction: column;
-} */
-
 #toggle-button {
     background: #4ADF86;
     font-size: 2rem;
@@ -113,6 +107,7 @@ hr {
 .passwords-container {
     display: flex;
     gap: 1rem;
+    flex-flow: row wrap;
 }
 
 .password-container {
@@ -204,8 +199,32 @@ body.light .password-container > span{
 
 
 /* Media Queries */
-@media only screen and (min-device-width: 320px) and (max-device-width: 430px) {
-    .root{
-        margin-top: 40%;
+ @media only screen and (min-device-width: 320px) and (max-device-width: 430px) {
+    html{
+        font-size: 20px;
     }
-}
+
+    .root {
+        align-items: center;
+    }
+
+    .checkbox {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    hr {
+        width: 100%;
+    }
+
+    .passwords-container {
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .password-container {
+        width: 60%;
+    }
+} 
+
